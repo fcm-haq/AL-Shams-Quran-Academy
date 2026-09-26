@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --emerald-primary: #0B3D2E;
+    --emerald-forest: #164C3B;
+    --emerald-deep: #08291F;
+    --ivory-bg: #FAF7F0;
+    --gold-muted: #C6A15B;
+    --gold-soft: #D8B775;
+    --charcoal-main: #1E2421;
+    --gray-green: #68736D;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--ivory-bg);
+    color: var(--charcoal-main);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Subtle Islamic geometric tile overlay helper */
+.bg-islamic-pattern {
+  background-image: radial-gradient(rgba(198, 161, 91, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-islamic-stars {
+  background-image: 
+    radial-gradient(circle at center, rgba(11, 61, 46, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at center, rgba(198, 161, 91, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px, 16px 16px;
+  background-position: 0 0, 16px 16px;
+}

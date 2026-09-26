@@ -1,0 +1,6 @@
+{
+  "name": "Al Shams Quran Academy",
+  "description": "Learn Quran online with Al Shams Quran Academy. Personalized Quran, Tajweed, Hifz, Duas, Salah and Islamic Studies classes for kids, teens and adults.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
