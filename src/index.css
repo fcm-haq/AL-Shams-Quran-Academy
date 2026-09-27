@@ -14,14 +14,30 @@
     --gray-green: #68736D;
   }
 
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: var(--font-sans);
     background-color: var(--ivory-bg);
     color: var(--charcoal-main);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   h1, h2, h3, .font-display {
     font-family: var(--font-serif);
+  }
+
+  /* Touch accessibility target optimization */
+  button, a, input, select, textarea {
+    touch-action: manipulation;
   }
 }
 

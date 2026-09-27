@@ -101,10 +101,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
         </div>
 
-        {/* Mobile Navigation Dropdown */}
+        {/* Mobile Navigation Dropdown & Backdrop */}
         {mobileMenuOpen && (
           <div className="md:hidden mt-3 pt-3 border-t border-[#0B3D2E]/10 pb-4 space-y-1 animate-fadeIn">
-            <nav className="flex flex-col space-y-1">
+            <nav className="flex flex-col space-y-1.5" aria-label="Mobile Navigation">
               {navLinks.map((link) => {
                 const isActive = currentPage === link.page;
                 return (
@@ -112,13 +112,16 @@ export const Navbar: React.FC<NavbarProps> = ({
                     key={link.page}
                     type="button"
                     onClick={() => handleLinkClick(link.page)}
-                    className={`text-left px-3 py-2 text-base rounded-md transition-colors ${
+                    className={`text-left px-4 py-3 text-base rounded-xl font-medium transition-all active:scale-[0.99] cursor-pointer flex items-center justify-between ${
                       isActive
-                        ? 'bg-[#0B3D2E]/10 text-[#0B3D2E] font-semibold'
-                        : 'text-[#1E2421] hover:text-[#0B3D2E] hover:bg-[#0B3D2E]/5'
+                        ? 'bg-[#0B3D2E] text-white shadow-xs font-semibold'
+                        : 'text-[#1E2421] hover:text-[#0B3D2E] hover:bg-[#0B3D2E]/5 bg-white/60'
                     }`}
                   >
-                    {link.label}
+                    <span>{link.label}</span>
+                    {isActive && (
+                      <span className="w-2 h-2 rounded-full bg-[#C6A15B]" />
+                    )}
                   </button>
                 );
               })}

@@ -32,16 +32,16 @@ export const TrustBar: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white border-y border-[#0B3D2E]/10 py-7 relative">
+    <section className="bg-white border-y border-[#0B3D2E]/10 py-6 sm:py-7 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-4 divide-y lg:divide-y-0 lg:divide-x divide-[#0B3D2E]/8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-4 lg:divide-x lg:divide-[#0B3D2E]/10">
           {trustPoints.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.title}
-                className={`flex items-center gap-3.5 ${
-                  idx !== 0 ? 'pt-4 lg:pt-0 lg:pl-4' : ''
+                className={`flex items-center gap-3.5 p-2 sm:p-0 rounded-lg sm:rounded-none bg-[#FAF7F0]/40 sm:bg-transparent border border-[#0B3D2E]/5 sm:border-0 ${
+                  idx !== 0 ? 'lg:pl-4' : ''
                 }`}
               >
                 <div className="w-10 h-10 rounded-lg bg-[#FAF7F0] border border-[#0B3D2E]/10 text-[#0B3D2E] flex items-center justify-center shrink-0">
